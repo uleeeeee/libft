@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/04 10:23:16 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/04 11:37:15 by tulenius         ###   ########.fr       */
+/*   Created: 2021/11/08 15:49:12 by tulenius          #+#    #+#             */
+/*   Updated: 2021/11/08 16:35:59 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	ft_strlen(char *str)
+char	*ft_strrchr(const char *str, int c)
 {
-	size_t	i;
+	int	i;
+	int	last_character;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
+		if (str[i] == c)
+		{
+			last_character = &stc[i];
+		}
 		i++;
 	}
-	return (i);
+	if (last_character != NULL)
+		return (last_character);
+	else
+		return (NULL);
 }

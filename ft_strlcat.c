@@ -1,24 +1,34 @@
-size_t	ft_strlen(char *str)
-{
-	size_t i;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/08 15:22:03 by tulenius          #+#    #+#             */
+/*   Updated: 2021/11/08 15:30:50 by tulenius         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
-
-char	*ft_strncat(char *dest, const char *src, size_t size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	i;
-	size_t j;
-	size_t dest_size;
+	size_t	j;
 
-	while (dest[i] != '\0')
+	i = 0;
+	j = 0;
+	while (dest[i])
 		i++;
-	if (ft_strlen(dest) > size)
+	if (size > ft_strlen(dest))
 	{
-		return (size + ft_strlen(src));
+		return (ft_strlen(src) + ft_strlen(dest));
 	}
-
+	while (src[i] && (ft_strlen(dest) + 1) < size)
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
+	dest[i] = '\0';
+	return (ft_strlen(src) + ft_strlen(dest));
 }

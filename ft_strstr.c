@@ -1,23 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/04 10:23:16 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/04 11:37:15 by tulenius         ###   ########.fr       */
+/*   Created: 2021/11/10 09:49:43 by tulenius          #+#    #+#             */
+/*   Updated: 2021/11/10 10:46:18 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	ft_strlen(char *str)
+char	*ft_strstr(const char *haystack, const char *needle)
 {
-	size_t	i;
+	int		i;
+	int		j;
+	char	*first_char_found;
 
 	i = 0;
-	while (str[i] != '\0')
+	j = 0;
+	while (haystack[++i] != '\0')
 	{
-		i++;
+		if (haystack[i] == needle[j])
+		{
+			first_char_found = &haystack[i];
+			while (needle[j] != '\0')
+			{
+				if (haystack[i] == needle[j])
+				{
+					i++;
+					j++;
+				}
+			}
+		}
 	}
-	return (i);
+	if (needle[j] == '\0')
+		return (first_char_found);
+	else
+		return (NULL);
 }

@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/04 10:23:16 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/04 11:37:15 by tulenius         ###   ########.fr       */
+/*   Created: 2021/11/10 15:13:43 by tulenius          #+#    #+#             */
+/*   Updated: 2021/11/10 16:02:01 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	ft_strlen(char *str)
+int	ft_strncmp(const char *str1, const char *str2, size_t nb)
 {
-	size_t	i;
+	size_t i;
 
 	i = 0;
-	while (str[i] != '\0')
-	{
+	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0' && i < nb)
 		i++;
-	}
-	return (i);
+
+	return (s1[i] - s2[i]);
 }
