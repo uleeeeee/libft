@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 14:35:52 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/16 14:52:04 by tulenius         ###   ########.fr       */
+/*   Created: 2021/11/16 14:54:56 by tulenius          #+#    #+#             */
+/*   Updated: 2021/11/16 15:02:30 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strequ(char const *s1, char const *s2)
+char	*ft_strdub(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
+	size_t	str_size;
+	char	*final_str;
 
 	i = 0;
-	if (!s1 || !s2)
-		return (0);
-	if (ft_strlen(s1) != ft_strlen(s2))
-		return (0);
-	while (s1[i] != '\0' || s2[i] != '\0')
+	str_size = len - start;
+	final_str = (char *)malloc(sizeof(str_size + 1));
+	if (final_str == NULL)
+		return (NULL);
+	while (start < len)
 	{
-		if (s1[i] > s2[i])
-			return (0);
-		else if (s1[i] < s2[i])
-			return (0);
+		final_str[i] = s[start];
 		i++;
+		start++;
 	}
-	return (1);
+	final_str[i] = '\0';
+	return (final_str);
 }

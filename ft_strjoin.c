@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 14:35:52 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/16 14:52:04 by tulenius         ###   ########.fr       */
+/*   Created: 2021/11/16 15:02:43 by tulenius          #+#    #+#             */
+/*   Updated: 2021/11/16 15:14:52 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strequ(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	i;
+	char	*final_str;
+	char	tmp_str;
 
 	i = 0;
-	if (!s1 || !s2)
-		return (0);
-	if (ft_strlen(s1) != ft_strlen(s2))
-		return (0);
-	while (s1[i] != '\0' || s2[i] != '\0')
-	{
-		if (s1[i] > s2[i])
-			return (0);
-		else if (s1[i] < s2[i])
-			return (0);
-		i++;
-	}
-	return (1);
+	final_str = (char *)(malloc((ft_strlen(s1) + (ft_strlen(s2 + 1)))));
+	if (final_str == NULL)
+		return (NULL);
+	ft_strcat(tmp_str, s1);
+	ft_strcat(tmp_str, s2);
+	final_str = tmp_str;
+	return (final_str);
 }
