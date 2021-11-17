@@ -6,11 +6,11 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 10:23:16 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/04 11:37:15 by tulenius         ###   ########.fr       */
+/*   Updated: 2021/11/17 10:53:58 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t	i;
 

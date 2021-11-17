@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/17 12:07:24 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/17 12:07:44 by tulenius         ###   ########.fr       */
+/*   Created: 2021/11/17 12:11:01 by tulenius          #+#    #+#             */
+/*   Updated: 2021/11/17 12:12:31 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char c)
+void	ft_putendl(char const *s)
 {
-	write(1, &c, 1);
+	ft_putstr(s);
+	ft_putchar('\n');
 }
