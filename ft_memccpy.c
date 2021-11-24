@@ -6,9 +6,11 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 19:49:08 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/11 21:04:02 by tulenius         ###   ########.fr       */
+/*   Updated: 2021/11/20 10:21:50 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {

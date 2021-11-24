@@ -6,7 +6,7 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 11:22:16 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/17 12:12:45 by tulenius         ###   ########.fr       */
+/*   Updated: 2021/11/19 11:47:57 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@ char **ft_strsplit(char const *s, char c)
 	size_t	i;
 
 	i = 0;
-
 }
 
 Prototype char ** ft_strsplit(char const *s, char c);

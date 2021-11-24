@@ -6,9 +6,11 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 15:02:43 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/17 11:21:50 by tulenius         ###   ########.fr       */
+/*   Updated: 2021/11/19 11:55:39 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

@@ -6,13 +6,15 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 11:54:00 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/15 12:30:48 by tulenius         ###   ########.fr       */
+/*   Updated: 2021/11/19 11:52:47 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isalpha(int c)
 {
-	if ((c >= 'a' && c<= 'z') || (c >= 'A' && c <= 'Z'))
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 	{
 		return (1);
 	}

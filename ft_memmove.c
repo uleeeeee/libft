@@ -6,28 +6,34 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 10:49:28 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/12 11:38:24 by tulenius         ###   ########.fr       */
+/*   Updated: 2021/11/20 11:08:33 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *memmove(void *dest, const void *src, size_t size)
+#include "libft.h"
+
+void	*ft_memmove(void *dest, const void *src, size_t size)
 {
 	size_t	i;
 
+	i = 0;
 	if (dest < src)
 	{
-		i = 0;
 		while (i < size)
 		{
 			((char *)dest)[i] = ((char *)src)[i];
+			i++;
 		}
 	}
 	else
 	{
-		i = size -1;
-		while (i >= 0){
+		i = size - 1;
+		while (i)
+		{
 			((char *)dest)[i] = ((char *)src)[i];
 			i--;
 		}
+		((char *)dest)[i] = ((char *)src)[i];
 	}
+	return (dest);
 }

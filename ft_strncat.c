@@ -6,9 +6,11 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 13:52:34 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/04 14:30:39 by tulenius         ###   ########.fr       */
+/*   Updated: 2021/11/23 13:33:34 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strncat(char *dest, const char *src, size_t n)
 {
@@ -21,7 +23,7 @@ char	*ft_strncat(char *dest, const char *src, size_t n)
 	{
 		i++;
 	}
-	while (j < n)
+	while (j < n && src[j] != '\0')
 	{
 		dest[i] = src[j];
 		i++;

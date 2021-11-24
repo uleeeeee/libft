@@ -6,9 +6,11 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 11:29:45 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/16 11:35:00 by tulenius         ###   ########.fr       */
+/*   Updated: 2021/11/19 11:56:52 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_toupper(int ch)
 {

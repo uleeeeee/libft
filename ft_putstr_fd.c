@@ -6,9 +6,11 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 12:46:58 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/17 12:51:28 by tulenius         ###   ########.fr       */
+/*   Updated: 2021/11/19 11:54:46 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putstr_fd(char const *s, int fd)
 {

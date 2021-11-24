@@ -6,9 +6,11 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 15:31:40 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/08 15:48:56 by tulenius         ###   ########.fr       */
+/*   Updated: 2021/11/19 12:05:01 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strchr(const char *str, int c)
 {
@@ -19,7 +21,7 @@ char	*ft_strchr(const char *str, int c)
 	{
 		if (str[i] == c)
 		{
-			return (&str[i]);
+			return ((char *)str + i);
 		}
 		i++;
 	}

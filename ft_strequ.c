@@ -6,9 +6,11 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 14:35:52 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/16 14:52:04 by tulenius         ###   ########.fr       */
+/*   Updated: 2021/11/19 11:55:15 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strequ(char const *s1, char const *s2)
 {

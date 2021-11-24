@@ -1,28 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strdup.c                                           :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 10:42:38 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/04 11:36:36 by tulenius         ###   ########.fr       */
+/*   Updated: 2021/11/19 12:11:55 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i + 1);
-}
+#include "libft.h"
 
 char	*ft_strdup(const char *str)
 {

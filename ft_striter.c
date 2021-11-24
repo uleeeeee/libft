@@ -6,9 +6,11 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 13:51:54 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/16 14:03:30 by tulenius         ###   ########.fr       */
+/*   Updated: 2021/11/22 15:12:33 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_striter(char *s, void (*f)(char *))
 {
@@ -17,7 +19,7 @@ void	ft_striter(char *s, void (*f)(char *))
 	i = 0;
 	while (s[i] != '\0')
 	{
-		f(s[i]);
+		f((char *)s + i);
 		i++;
 	}
 }

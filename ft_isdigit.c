@@ -6,9 +6,11 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 12:25:00 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/15 12:30:47 by tulenius         ###   ########.fr       */
+/*   Updated: 2021/11/19 11:52:58 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isdigit(int arg)
 {

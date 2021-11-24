@@ -6,9 +6,11 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 15:22:03 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/08 15:30:50 by tulenius         ###   ########.fr       */
+/*   Updated: 2021/11/19 11:55:43 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {

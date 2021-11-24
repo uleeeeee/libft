@@ -6,9 +6,11 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 13:44:33 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/16 13:48:47 by tulenius         ###   ########.fr       */
+/*   Updated: 2021/11/19 11:55:10 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_strdel(char **as)
 {

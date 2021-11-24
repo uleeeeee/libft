@@ -6,9 +6,11 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 14:08:36 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/12 14:28:29 by tulenius         ###   ########.fr       */
+/*   Updated: 2021/11/22 14:25:44 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_memcmp(const void *str1, const void *str2, size_t nb)
 {
@@ -22,5 +24,5 @@ int	ft_memcmp(const void *str1, const void *str2, size_t nb)
 	while (tmp_str1[i] == tmp_str2[i] && tmp_str1[i] \
 	!= '\0' && tmp_str2[i] != '\0' && i < nb)
 		i++;
-	return (tmp_str1[i] - tmp_str2[i]);
+	return (tmp_str2[i] - tmp_str1[i]);
 }

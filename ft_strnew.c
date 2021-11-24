@@ -6,9 +6,11 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 13:39:46 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/16 13:44:15 by tulenius         ###   ########.fr       */
+/*   Updated: 2021/11/19 11:56:29 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strnew(size_t size)
 {

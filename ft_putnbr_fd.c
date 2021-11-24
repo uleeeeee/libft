@@ -6,9 +6,11 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 12:53:17 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/17 13:00:04 by tulenius         ###   ########.fr       */
+/*   Updated: 2021/11/19 11:54:39 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {

@@ -6,11 +6,13 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 11:35:18 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/16 11:36:34 by tulenius         ###   ########.fr       */
+/*   Updated: 2021/11/20 10:28:12 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	tolower(int ch)
+#include "libft.h"
+
+int	ft_tolower(int ch)
 {
 	if (ch >= 65 && ch <= 90)
 	{

@@ -6,9 +6,11 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 12:46:47 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/04 12:52:42 by tulenius         ###   ########.fr       */
+/*   Updated: 2021/11/19 11:55:05 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strcpy(char *dest, const char *src)
 {

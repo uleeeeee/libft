@@ -6,9 +6,11 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 14:54:56 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/16 15:02:30 by tulenius         ###   ########.fr       */
+/*   Updated: 2021/11/19 11:56:46 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strdub(char const *s, unsigned int start, size_t len)
 {

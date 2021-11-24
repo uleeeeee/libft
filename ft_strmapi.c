@@ -6,9 +6,11 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 14:23:31 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/16 14:25:59 by tulenius         ###   ########.fr       */
+/*   Updated: 2021/11/19 12:18:40 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -21,7 +23,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (NULL);
 	while (s[i] != '\0')
 	{
-		final_str[i] = f(i, f(s[i]));
+		final_str[i] = f(i, s[i]);
 		i++;
 	}
 	final_str[i] = '\0';

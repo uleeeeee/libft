@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tulenius <tulenius@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 11:53:24 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/11 13:30:05 by tulenius         ###   ########.fr       */
+/*   Updated: 2021/11/19 11:52:20 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_bzero(void *str, size_t n)
 {

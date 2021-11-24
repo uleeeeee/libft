@@ -6,9 +6,11 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 11:19:00 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/16 11:29:32 by tulenius         ###   ########.fr       */
+/*   Updated: 2021/11/19 11:53:04 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isprint(int argc)
 {

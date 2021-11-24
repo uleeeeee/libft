@@ -6,9 +6,11 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 14:52:13 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/16 14:54:38 by tulenius         ###   ########.fr       */
+/*   Updated: 2021/11/19 11:56:24 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
