@@ -6,7 +6,7 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 14:38:58 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/20 09:51:04 by tulenius         ###   ########.fr       */
+/*   Updated: 2021/11/25 11:37:37 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		res *= 10 + str[i] - '0';
+		res = res * 10 + str[i] - '0';
 		i++;
 	}
 	return ((int)(res * multiplier));

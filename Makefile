@@ -1,6 +1,6 @@
-FLAG = -Wall -Wextra -Werror
+FLAG = -Wall -Wextra -Werror -fPIC
 
-NAME = libft.a
+NAME = libft.so
 
 SRC = ft_atoi.c \
 	  ft_bzero.c \
@@ -9,6 +9,7 @@ SRC = ft_atoi.c \
 	  ft_isascii.c \
 	  ft_isdigit.c \
 	  ft_isprint.c \
+	  ft_itoa.c \
 	  ft_memalloc.c \
 	  ft_memccpy.c \
 	  ft_memchr.c \
@@ -49,8 +50,10 @@ SRC = ft_atoi.c \
 	  ft_strrchr.c \
 	  ft_strstr.c \
 	  ft_strsub.c \
+	  ft_strtrim.c \
 	  ft_tolower.c \
 	  ft_toupper.c \
+	  ft_lstnew.c \
 
 
 
@@ -63,6 +66,9 @@ $(NAME): $(OBJ)
 	@echo "$(NAME) created"
 	@ranlib $(NAME)
 	@echo "$(NAME) indexed"
+so:
+	@$(NAME) $(OBJ)
+	$(LINK.c) -shared $^ -o $@
 
 %.o: %.c
 	@gcc $(FLAG) -c $< -o $@

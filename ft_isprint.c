@@ -6,7 +6,7 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 11:19:00 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/19 11:53:04 by tulenius         ###   ########.fr       */
+/*   Updated: 2021/11/25 11:29:55 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isprint(int argc)
 {
-	if (argc >= 33 && argc < 127)
+	if (argc >= 32 && argc < 127)
 		return (1);
 	else
 		return (0);
