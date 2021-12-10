@@ -1,0 +1,4 @@
+memchr should be okay, test on different tests
+ft_strsplit -removed from makefile
+
+strdup lisätty +1 null terminatelle malloc linjalle

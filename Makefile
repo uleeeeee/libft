@@ -1,6 +1,6 @@
-FLAG = -Wall -Wextra -Werror -fPIC
+FLAG = -Wall -Wextra -Werror
 
-NAME = libft.so
+NAME = libft.a
 
 SRC = ft_atoi.c \
 	  ft_bzero.c \
@@ -56,7 +56,6 @@ SRC = ft_atoi.c \
 	  ft_lstnew.c \
 
 
-
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
@@ -66,9 +65,6 @@ $(NAME): $(OBJ)
 	@echo "$(NAME) created"
 	@ranlib $(NAME)
 	@echo "$(NAME) indexed"
-so:
-	@$(NAME) $(OBJ)
-	$(LINK.c) -shared $^ -o $@
 
 %.o: %.c
 	@gcc $(FLAG) -c $< -o $@

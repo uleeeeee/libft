@@ -6,16 +6,17 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 20:20:23 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/30 11:46:04 by tulenius         ###   ########.fr       */
+/*   Updated: 2021/12/07 16:35:57 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	str_start(char const *str)
+size_t	skip_whitespaces(char const *str)
 {
 	size_t	i;
 
+	i = 0;
 	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\t')
 		i++;
 	return (i);
@@ -28,8 +29,8 @@ char	*ft_strtrim(char const *str)
 	size_t	k;
 	char	*str_new;
 
-	i = str_start(str);
 	k = 0;
+	i = skip_whitespaces(str);
 	if (str[i] == '\0')
 		return (ft_strcpy(ft_memalloc(sizeof(char) * 2), ""));
 	j = ft_strlen(str) - 1;
@@ -40,7 +41,7 @@ char	*ft_strtrim(char const *str)
 		return (NULL);
 	while (k < j - i + 1)
 	{
-		str_new[k] = str_new[i + k];
+		str_new[k] = str[i + k];
 		k++;
 	}
 	str_new[k] = '\0';
