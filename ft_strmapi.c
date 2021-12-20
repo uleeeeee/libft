@@ -6,7 +6,7 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 14:23:31 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/19 12:18:40 by tulenius         ###   ########.fr       */
+/*   Updated: 2021/12/20 22:57:48 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	i;
-	char	*final_str;
+	unsigned int	i;
+	char			*final_str;
 
 	i = 0;
 	final_str = (char *)malloc(sizeof(s));

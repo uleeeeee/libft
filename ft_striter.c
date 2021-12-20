@@ -6,7 +6,7 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 13:51:54 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/22 15:12:33 by tulenius         ###   ########.fr       */
+/*   Updated: 2021/12/20 22:55:59 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_striter(char *s, void (*f)(char *))
 {
-	size_t	i;
+	unsigned int	i;
 
 	i = 0;
 	while (s[i] != '\0')

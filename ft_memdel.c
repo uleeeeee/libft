@@ -6,16 +6,14 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 11:57:56 by tulenius          #+#    #+#             */
-/*   Updated: 2021/11/19 11:53:31 by tulenius         ###   ########.fr       */
+/*   Updated: 2021/12/20 22:35:01 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-#include "libft.h"
-
-void	ft_memdel(void **ap)
+void	ft_memdel(void **ptr)
 {
-	free(*ap);
-	*ap = NULL;
+	free(*ptr);
+	*ptr = NULL;
 }

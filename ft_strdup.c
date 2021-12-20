@@ -6,7 +6,7 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 10:42:38 by tulenius          #+#    #+#             */
-/*   Updated: 2021/12/08 15:59:50 by tulenius         ###   ########.fr       */
+/*   Updated: 2021/12/15 16:34:33 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strdup(const char *str)
 {
 	char	*result;
-	int		i;
+	size_t	i;
 
 	i = 0;
 	result = (char *) malloc(sizeof(char) * ft_strlen(str) + 1);
