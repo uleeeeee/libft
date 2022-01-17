@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 13:39:46 by tulenius          #+#    #+#             */
-/*   Updated: 2022/01/15 16:37:36 by tulenius         ###   ########.fr       */
+/*   Created: 2021/11/16 13:44:33 by tulenius          #+#    #+#             */
+/*   Updated: 2021/11/19 11:55:10 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnew(size_t size)
+void	ft_strdel(char **as)
 {
-	void	*ptr;
-
-	ptr = malloc(size + 1);
-	if (ptr == NULL)
-		return (NULL);
-	ft_bzero(ptr, size);
-	return (ptr);
+	free(*as);
+	*as = NULL;
 }

@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 13:39:46 by tulenius          #+#    #+#             */
-/*   Updated: 2022/01/15 16:37:36 by tulenius         ###   ########.fr       */
+/*   Created: 2021/11/08 15:22:03 by tulenius          #+#    #+#             */
+/*   Updated: 2021/11/25 12:11:57 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnew(size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	void	*ptr;
+	size_t	j;
+	size_t	k;
 
-	ptr = malloc(size + 1);
-	if (ptr == NULL)
-		return (NULL);
-	ft_bzero(ptr, size);
-	return (ptr);
+	j = 0;
+	k = 0;
+	while (dst[j] && j < size)
+		j++;
+	while ((src[k]) && ((j + k + 1) < size))
+	{
+		dst[j + k] = src[k];
+		k++;
+	}
+	if (j != size)
+		dst[j + k] = '\0';
+	return (j + ft_strlen(src));
 }

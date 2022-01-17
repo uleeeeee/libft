@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 13:39:46 by tulenius          #+#    #+#             */
-/*   Updated: 2022/01/15 16:37:36 by tulenius         ###   ########.fr       */
+/*   Created: 2021/11/08 15:49:12 by tulenius          #+#    #+#             */
+/*   Updated: 2021/11/24 11:47:04 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnew(size_t size)
+char	*ft_strrchr(const char *str, int c)
 {
-	void	*ptr;
+	int	i;
 
-	ptr = malloc(size + 1);
-	if (ptr == NULL)
-		return (NULL);
-	ft_bzero(ptr, size);
-	return (ptr);
+	i = ft_strlen(str);
+	if (c == 0)
+		return ((char *)str + i);
+	while (i >= 0)
+	{
+		if (str[i] == c)
+			return ((char *)str + i);
+		i--;
+	}
+	return (NULL);
 }

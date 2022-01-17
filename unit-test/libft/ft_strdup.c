@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 13:39:46 by tulenius          #+#    #+#             */
-/*   Updated: 2022/01/15 16:37:36 by tulenius         ###   ########.fr       */
+/*   Created: 2021/11/04 10:42:38 by tulenius          #+#    #+#             */
+/*   Updated: 2021/12/15 16:34:33 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnew(size_t size)
+char	*ft_strdup(const char *str)
 {
-	void	*ptr;
+	char	*result;
+	size_t	i;
 
-	ptr = malloc(size + 1);
-	if (ptr == NULL)
+	i = 0;
+	result = (char *) malloc(sizeof(char) * ft_strlen(str) + 1);
+	if (result == NULL)
+	{
 		return (NULL);
-	ft_bzero(ptr, size);
-	return (ptr);
+	}
+	while (str[i] != '\0')
+	{
+		result[i] = str[i];
+		i++;
+	}
+	result[i] = '\0';
+	return (result);
 }

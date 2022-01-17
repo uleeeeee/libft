@@ -75,6 +75,11 @@ $(NAME): $(OBJECTS)
 %.o: %.c
 	@gcc $(FLAG) -c $< -o $@
 
+so:
+	$(CC) -nostartfiles -fPIC $(FLAG) $(SOURCES)
+	gcc -nostartfiles -shared -o libft.so $(OBJECTS)
+
+
 clean:
 	@rm -f $(OBJECTS)
 	@echo "OBJ deleted"

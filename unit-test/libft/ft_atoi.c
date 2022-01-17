@@ -1,31 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 14:08:01 by tulenius          #+#    #+#             */
-/*   Updated: 2022/01/15 16:37:00 by tulenius         ###   ########.fr       */
+/*   Created: 2021/11/12 14:38:58 by tulenius          #+#    #+#             */
+/*   Updated: 2021/11/25 11:37:37 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmap(char const *s, char (*f)(char))
+int	ft_atoi(const char *str)
 {
-	size_t	i;
-	char	*final_str;
+	long			res;
+	long			i;
+	unsigned int	multiplier;
 
+	res = 0;
 	i = 0;
-	final_str = (char *)malloc(sizeof(s) + 1);
-	if (final_str == NULL)
-		return (NULL);
-	while (s[i] != '\0')
+	multiplier = 1;
+	while (str[i] == '\v' || str[i] == '\t' || str[i] == '\f' || \
+	str[i] == '\r' || str[i] == '\n' || str[i] == ' ')
+		i++;
+	if (str[i] == '-' || str[i] == '+')
 	{
-		final_str[i] = f(s[i]);
+		if (str[i] == '-')
+			multiplier = -1;
 		i++;
 	}
-	final_str[i] = '\0';
-	return (final_str);
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		res = res * 10 + str[i] - '0';
+		i++;
+	}
+	return ((int)(res * multiplier));
 }
