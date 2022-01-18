@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/17 12:06:54 by tulenius          #+#    #+#             */
-/*   Updated: 2022/01/18 16:17:14 by tulenius         ###   ########.fr       */
+/*   Created: 2021/11/16 11:35:18 by tulenius          #+#    #+#             */
+/*   Updated: 2021/11/20 10:28:12 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *s)
+int	ft_tolower(int ch)
 {
-	size_t	i;
-
-	i = 0;
-	while (s[i] != '\0')
+	if (ch >= 65 && ch <= 90)
 	{
-		ft_putchar(s[i]);
-		i++;
+		return (ch += 32);
 	}
+	else
+		return (ch);
 }

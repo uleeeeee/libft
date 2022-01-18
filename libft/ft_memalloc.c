@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/17 12:06:54 by tulenius          #+#    #+#             */
-/*   Updated: 2022/01/18 16:17:14 by tulenius         ###   ########.fr       */
+/*   Created: 2021/11/16 11:39:19 by tulenius          #+#    #+#             */
+/*   Updated: 2021/11/19 11:53:08 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *s)
+void	*ft_memalloc(size_t size)
 {
-	size_t	i;
+	void	*ptr;
 
-	i = 0;
-	while (s[i] != '\0')
-	{
-		ft_putchar(s[i]);
-		i++;
-	}
+	ptr = malloc(size);
+	if (ptr == NULL)
+		return (NULL);
+	ft_bzero(ptr, size);
+	return (ptr);
 }

@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/17 12:06:54 by tulenius          #+#    #+#             */
-/*   Updated: 2022/01/18 16:17:14 by tulenius         ###   ########.fr       */
+/*   Created: 2021/11/15 12:25:00 by tulenius          #+#    #+#             */
+/*   Updated: 2021/11/19 11:52:58 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *s)
+int	ft_isdigit(int arg)
 {
-	size_t	i;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		ft_putchar(s[i]);
-		i++;
-	}
+	if (arg >= '0' && arg <= '9')
+		return (1);
+	else
+		return (0);
 }

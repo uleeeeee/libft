@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/17 12:06:54 by tulenius          #+#    #+#             */
-/*   Updated: 2022/01/18 16:17:14 by tulenius         ###   ########.fr       */
+/*   Created: 2021/11/11 13:30:53 by tulenius          #+#    #+#             */
+/*   Updated: 2022/01/17 15:21:48 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *s)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 
+	if (!dest && !src)
+		return (NULL);
 	i = 0;
-	while (s[i] != '\0')
+	while (i < n)
 	{
-		ft_putchar(s[i]);
+		((unsigned char *)dest)[i] = ((unsigned const char *)src)[i];
 		i++;
 	}
+	return (dest);
 }

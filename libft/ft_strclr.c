@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/17 12:06:54 by tulenius          #+#    #+#             */
-/*   Updated: 2022/01/18 16:17:14 by tulenius         ###   ########.fr       */
+/*   Created: 2021/11/16 13:49:09 by tulenius          #+#    #+#             */
+/*   Updated: 2022/01/17 16:30:03 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *s)
+void	ft_strclr(char *s)
 {
-	size_t	i;
+	size_t	str_size;
 
-	i = 0;
-	while (s[i] != '\0')
+	if (s != NULL)
 	{
-		ft_putchar(s[i]);
-		i++;
+		str_size = ft_strlen(s);
+		ft_bzero(s, str_size);
 	}
 }

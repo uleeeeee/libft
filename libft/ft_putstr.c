@@ -6,7 +6,7 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 12:06:54 by tulenius          #+#    #+#             */
-/*   Updated: 2022/01/18 16:17:14 by tulenius         ###   ########.fr       */
+/*   Updated: 2022/01/18 16:18:20 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,13 @@ void	ft_putstr(char const *s)
 {
 	size_t	i;
 
-	i = 0;
-	while (s[i] != '\0')
+	if (s)
 	{
-		ft_putchar(s[i]);
-		i++;
+		i = 0;
+		while (s[i] != '\0')
+		{
+			ft_putchar(s[i]);
+			i++;
+		}
 	}
 }

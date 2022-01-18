@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/17 12:06:54 by tulenius          #+#    #+#             */
-/*   Updated: 2022/01/18 16:17:14 by tulenius         ###   ########.fr       */
+/*   Created: 2021/11/12 14:08:36 by tulenius          #+#    #+#             */
+/*   Updated: 2021/11/25 11:19:04 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *s)
+int	ft_memcmp(const void *str1, const void *str2, size_t nb)
 {
 	size_t	i;
+	char	*tmp_str1;
+	char	*tmp_str2;
 
 	i = 0;
-	while (s[i] != '\0')
+	tmp_str1 = (char *)str1;
+	tmp_str2 = (char *)str2;
+	while (i < nb)
 	{
-		ft_putchar(s[i]);
+		if (tmp_str1[i] != tmp_str2[i])
+			return ((unsigned char)tmp_str1[i] - (unsigned char)tmp_str2[i]);
 		i++;
 	}
+	return (0);
 }

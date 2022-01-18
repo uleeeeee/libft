@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/17 12:06:54 by tulenius          #+#    #+#             */
-/*   Updated: 2022/01/18 16:17:14 by tulenius         ###   ########.fr       */
+/*   Created: 2021/11/08 15:22:03 by tulenius          #+#    #+#             */
+/*   Updated: 2021/11/25 12:11:57 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *s)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	i;
+	size_t	j;
+	size_t	k;
 
-	i = 0;
-	while (s[i] != '\0')
+	j = 0;
+	k = 0;
+	while (dst[j] && j < size)
+		j++;
+	while ((src[k]) && ((j + k + 1) < size))
 	{
-		ft_putchar(s[i]);
-		i++;
+		dst[j + k] = src[k];
+		k++;
 	}
+	if (j != size)
+		dst[j + k] = '\0';
+	return (j + ft_strlen(src));
 }

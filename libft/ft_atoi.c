@@ -1,25 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/17 12:06:54 by tulenius          #+#    #+#             */
-/*   Updated: 2022/01/18 16:17:14 by tulenius         ###   ########.fr       */
+/*   Created: 2021/11/12 14:38:58 by tulenius          #+#    #+#             */
+/*   Updated: 2021/11/25 11:37:37 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *s)
+int	ft_atoi(const char *str)
 {
-	size_t	i;
+	long			res;
+	long			i;
+	unsigned int	multiplier;
 
+	res = 0;
 	i = 0;
-	while (s[i] != '\0')
+	multiplier = 1;
+	while (str[i] == '\v' || str[i] == '\t' || str[i] == '\f' || \
+	str[i] == '\r' || str[i] == '\n' || str[i] == ' ')
+		i++;
+	if (str[i] == '-' || str[i] == '+')
 	{
-		ft_putchar(s[i]);
+		if (str[i] == '-')
+			multiplier = -1;
 		i++;
 	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		res = res * 10 + str[i] - '0';
+		i++;
+	}
+	return ((int)(res * multiplier));
 }
