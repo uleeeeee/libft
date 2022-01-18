@@ -1,8 +1,8 @@
-FLAG = -Wall -Wextra -Werror
-
 NAME = libft.a
 
-SRC = ft_atoi.c \
+FLAG = -Wall -Wextra -Werror
+
+SOURCES = ft_atoi.c \
 	  ft_bzero.c \
 	  ft_isalnum.c \
 	  ft_isalpha.c \
@@ -54,14 +54,20 @@ SRC = ft_atoi.c \
 	  ft_tolower.c \
 	  ft_toupper.c \
 	  ft_lstnew.c \
+	  ft_lstadd.c \
+	  ft_lstdel.c \
+	  ft_lstdelone.c \
+	  ft_lstiter.c \
+	  ft_lstmap.c \
+	  ft_strsplit.c \
 
 
-OBJ = $(SRC:.c=.o)
+OBJECTS = $(SOURCES:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	@ar rc $(NAME) $(OBJ)
+$(NAME): $(OBJECTS)
+	@ar rc $(NAME) $(OBJECTS)
 	@echo "$(NAME) created"
 	@ranlib $(NAME)
 	@echo "$(NAME) indexed"
@@ -70,7 +76,7 @@ $(NAME): $(OBJ)
 	@gcc $(FLAG) -c $< -o $@
 
 clean:
-	@rm -f $(OBJ)
+	@rm -f $(OBJECTS)
 	@echo "OBJ deleted"
 
 fclean: clean

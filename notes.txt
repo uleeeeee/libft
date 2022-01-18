@@ -1,0 +1,98 @@
+nice tests, a lot of improvements like how to save lines, what code is useless and so on.
+
+ft_memcpy, if dest or src nulll, fix to avois segmentation fault
+ft_memmove segmentation fault. fix if(dest < src) to if (dest <= src)
+on else statement, add if (size == 0) return (dest);
+
+ft_strnstr check if len is zero or (haystack[i] '\0' || needle [i] '\0') return NULL return char * haystack
+
+ft_strstr return haystack address if parameters null if haystack = 0, return haystack
+if needle nothing, return haystack
+if (haystack[i] != '\0' && needle[i] = '\0')
+return (char*) haystack
+
+ft_putnbr_fd could use ft_putnbr function call to make it shorter
+
+ft_strsplit on ft_strndup you need to free earlier memory if there is no space
+delete ft_strncpy on strsplit
+
+ft_itoa int --> static int
+
+check memcmp from git, if it passes last test then
+
+```
+ft_memalloc, if size is zero, return NULL
+
+
+atoi shorter, 9-13 to make it sh orter
+```
+
+/////////////////////////////////////////////////////////////
+
+fillit, evaluatin for omar
+
+check const void memccpy
+
+------------------------------------------------------------------------------------
+
+13.1 ycucchi's evaluation for me:
+
+memmove does not well with NULL sa both parameters and size
+
+strnstr does not work with empty strings and 0 length
+
+strstr check empty string
+
+atoi does not work with oerr long max max/min value
+
+~~strsub,~~strmapi,strmap,strnew, strnstr add +1 for malloc
+
+-------------------------------------------------------------------------------------
+
+gcc -Wall -Wextra -Werror -g *.c (REMEMBER THAT -g)
+
+lldb
+
+*(lldb opens up)*
+
+target create a.out
+
+b main *(makes the program start from your function called main)*
+
+run
+
+gui
+
+*then just press s to go line by line your code*
+
+to exit press ESC and write quit
+
+---------------------------------------------------------
+
+htahvana evaluation for my libft 14.1
+
+strstr delete if haystack s empty, left only if needleis empty on line-22
+
+strnequ delete the second if statement
+
+memalloc delete if size == 0 return null
+
+====================================
+
+ANH eva for me
+
+ft_memcpy line-20, return NULL
+
+also ft_memccpy should return NULL (=crash)
+
+ft_strstr from yoan messages, line 21 make neede as array, line 15 make needle as pointer
+
+ft_strnstr change line 21 to if (*needle == '\0') --> return ((char *) haystack);
+
+ft_memdel check if ptr is null and return 0, othet like strnequ, strequ,
+
+check ft_strstrlne 22 to add +1
+
+ft_strmap if s is null, return NULL.  use ft_strlen to take the char size
+
+Check null to protect on functions: memdel, strdel, strclr, striter, striteri, strmap, strmapi, strsub,strtrim,strpslit,putstr,putendl
