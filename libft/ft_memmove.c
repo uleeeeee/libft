@@ -6,18 +6,16 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 10:49:28 by tulenius          #+#    #+#             */
-/*   Updated: 2022/01/18 16:27:15 by tulenius         ###   ########.fr       */
+/*   Updated: 2022/01/19 11:53:08 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t size)
+static	void	**ft_memmover(void *dest, const void *src, size_t size)
 {
 	size_t	i;
 
-	if (!dest && !src)
-		return (NULL);
 	i = 0;
 	if (dest <= src)
 	{
@@ -40,4 +38,11 @@ void	*ft_memmove(void *dest, const void *src, size_t size)
 		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
 	}
 	return (dest);
+}
+
+void	*ft_memmove(void *dest, const void *src, size_t size)
+{
+	if (!dest && !src)
+		return (NULL);
+	return (ft_memmover(dest, src, size));
 }

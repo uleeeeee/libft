@@ -6,7 +6,7 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 11:22:16 by tulenius          #+#    #+#             */
-/*   Updated: 2022/01/18 15:14:24 by tulenius         ###   ########.fr       */
+/*   Updated: 2022/01/19 11:39:12 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static char	*ft_strndup(const char *s, size_t n)
 	return (result);
 }
 
-char	**ft_strsplit(char const *s, char c)
+static char	**ft_split(char const *s, char c)
 {
 	int		i;
 	int		j;
@@ -54,8 +54,6 @@ char	**ft_strsplit(char const *s, char c)
 
 	i = 0;
 	k = 0;
-	if (!s)
-		return (NULL);
 	array = (char **)malloc(sizeof(char *) * (count_words(s, c)) + 1);
 	if (array == NULL)
 		return (NULL);
@@ -65,7 +63,7 @@ char	**ft_strsplit(char const *s, char c)
 			i++;
 		j = i;
 		while (s[i] && s[i] != c)
-			i++;
+				i++;
 		if (i > j)
 		{
 			array[k] = ft_strndup(s + j, i - j);
@@ -74,4 +72,11 @@ char	**ft_strsplit(char const *s, char c)
 	}
 	array[k] = NULL;
 	return (array);
+}
+
+char	**ft_strsplit(char const *s, char c)
+{
+	if (!s || !c)
+		return (NULL);
+	return (ft_split(s, c));
 }

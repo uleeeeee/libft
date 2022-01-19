@@ -6,7 +6,7 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 11:39:24 by tulenius          #+#    #+#             */
-/*   Updated: 2022/01/18 16:13:31 by tulenius         ###   ########.fr       */
+/*   Updated: 2022/01/19 11:42:48 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-typedef	struct		s_list
+typedef struct s_list
 {
 	void			*content;
 	size_t			content_size;
