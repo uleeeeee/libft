@@ -54,7 +54,12 @@ SRC = ft_atoi.c \
 	  ft_tolower.c \
 	  ft_toupper.c \
 	  ft_lstnew.c \
-	  ft_strsplit.c
+	  ft_strsplit.c \
+	  ft_lstadd.c \
+	  ft_lstiter.c \
+	  ft_lstmap.c \
+	  ft_lstdel.c \
+	  ft_lstdelone.c
 
 
 OBJ = $(SRC:.c=.o)
