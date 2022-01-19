@@ -6,20 +6,20 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 16:55:10 by tulenius          #+#    #+#             */
-/*   Updated: 2021/12/08 12:22:57 by tulenius         ###   ########.fr       */
+/*   Updated: 2022/01/19 12:25:21 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	absolute_value(int nb)
+static int	absolute_value(int nb)
 {
 	if (nb < 0)
 		return (-nb);
 	return (nb);
 }
 
-int	get_len(int nbr)
+static int	get_len(int nbr)
 {
 	size_t	len;
 
