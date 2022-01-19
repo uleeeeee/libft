@@ -6,7 +6,7 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 11:22:16 by tulenius          #+#    #+#             */
-/*   Updated: 2022/01/19 11:39:12 by tulenius         ###   ########.fr       */
+/*   Updated: 2022/01/19 12:15:36 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ static char	**ft_split(char const *s, char c)
 			i++;
 		j = i;
 		while (s[i] && s[i] != c)
-				i++;
+			i++;
 		if (i > j)
 		{
 			array[k] = ft_strndup(s + j, i - j);
