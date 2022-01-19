@@ -6,13 +6,13 @@
 /*   By: tulenius <tulenius@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 20:20:23 by tulenius          #+#    #+#             */
-/*   Updated: 2022/01/18 15:08:07 by tulenius         ###   ########.fr       */
+/*   Updated: 2022/01/19 12:47:32 by tulenius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	skip_whitespaces(char const *str)
+static size_t	skip_whitespaces(char const *str)
 {
 	size_t	i;
 
